@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1nrkc3ga3q4c"]
+
+[ext_resource type="PackedScene" uid="uid://dj1l5jsddfo6s" path="res://src/main_scene.tscn" id="1_ptx1g"]
+[ext_resource type="Script" path="res://src/fps_label.gd" id="2_b3fk6"]
+
+[node name="ControlShader" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Canvas" parent="." instance=ExtResource("1_ptx1g")]
+process_mode = 3
+layout_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="FPSLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+script = ExtResource("2_b3fk6")
