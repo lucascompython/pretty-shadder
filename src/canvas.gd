@@ -174,7 +174,23 @@ func previous_setting() -> void:
 func update_text(text: String) -> void:
 	label.text = text
 
-func _input(_event: InputEvent) -> void:
+
+const threshold := 100
+
+func _input(event: InputEvent) -> void:
+
+	if event is InputEventScreenDrag:
+		var drag := event as InputEventScreenDrag
+		if drag.relative.x > threshold:
+			next_setting()
+		elif drag.relative.x < -threshold:
+			previous_setting()
+		elif drag.relative.y > threshold:
+			decrease_setting()
+		elif drag.relative.y < -threshold:
+			increase_setting()
+		return
+		
 	if Input.is_action_just_pressed("ui_up"):
 		increase_setting()
 	elif Input.is_action_just_pressed("ui_down"):
@@ -189,4 +205,3 @@ func _process(delta: float) -> void:
 		shader.set_shader_parameter("out_time", (Time.get_ticks_msec() / 1000.0) - elapsed)
 	else:
 		elapsed += delta
-		

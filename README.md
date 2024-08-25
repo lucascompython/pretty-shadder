@@ -8,6 +8,6 @@ It is currently deployed on Itch.io [here](https://lucas-linhares.itch.io/pretty
 
 Controls are simple:
 
-- Select parameters with arrows left and right ( ← →)
+- Select parameters with arrows left and right (← →) or for mobile, swiping left and right on the screen.
 
-- Increase or decrease their value with arrows up and down (↑ ↓).
+- Increase or decrease their value with arrows up and down (↑ ↓) or for mobile, swiping up and down on the screen.
