@@ -26,7 +26,7 @@ var color_presets := {
 	Spectrum.BMO: [Vector3(0.938, 0.328, 0.718), Vector3(0.659, 0.438, 0.328), Vector3(0.388, 0.388, 0.296), Vector3(2.538, 2.478, 0.168)],
 	Spectrum.GBO: [Vector3(0.892, 0.725, 0.000), Vector3(0.878, 0.278, 0.725), Vector3(0.332, 0.518, 0.545), Vector3(2.440, 5.043, 0.732)],
 	Spectrum.YMC: [Vector3(1.000, 0.500, 0.500), Vector3(0.500, 0.500, 0.500), Vector3(0.750, 1.000, 0.667), Vector3(0.800, 1.000, 0.333)],
-	}
+}
 
 var a: Vector3 = color_presets[Spectrum.PURPLE][0]
 var b: Vector3 = color_presets[Spectrum.PURPLE][1]
@@ -90,7 +90,7 @@ func increase_setting() -> void:
 			else:
 				max_value = true
 		Settings.FRACTAL_FORCE:
-			if fractal_force < 20.0:
+			if fractal_force < 2.0:
 				fractal_force += 0.1
 			else:
 				max_value = true
